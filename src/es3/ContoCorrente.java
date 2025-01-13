@@ -13,11 +13,14 @@ public class ContoCorrente {
 	}
 
 
-	public void preleva(double x) {
+	public void preleva(double x) throws BancaException {
 		if (nMovimenti < maxMovimenti) {
 			saldo = saldo - x;
 		} else {
 			saldo = saldo - x - 0.50;
+		}
+		if(saldo < 0){
+			throw new BancaException("il conto è in rosso");
 		}
 		nMovimenti++;
 	}
@@ -26,4 +29,19 @@ public class ContoCorrente {
 		return saldo;
 	}
 
+	public String getTitolare() {
+		return titolare;
+	}
+
+	public int getnMovimenti() {
+		return nMovimenti;
+	}
+
+	public int getMaxMovimenti() {
+		return maxMovimenti;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
 }
