@@ -44,4 +44,14 @@ public class ContoCorrente {
 	public double getSaldo() {
 		return this.saldo;
 	}
+
+	@Override
+	public String toString() {
+		return "ContoCorrente{" +
+				  "titolare='" + titolare + '\'' +
+				  ", nMovimenti=" + nMovimenti +
+				  ", maxMovimenti=" + maxMovimenti +
+				  ", saldo=" + saldo +
+				  '}';
+	}
 }
