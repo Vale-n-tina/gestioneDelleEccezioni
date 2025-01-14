@@ -11,13 +11,16 @@ public class Main {
 
 		//Esercizio1.eseguiEsercizio();
 		//insertDati();
-		ContoCorrente conto1 = new ContoCorrente("valentina", 30000);
+		ContoCorrente conto1 = new ContoCorrente("valentina", 3000);
 		System.out.println("saldo disponibile:" + conto1.restituisciSaldo());
 		try {
-			conto1.preleva(1200);
-			System.out.println("saldo disponibile: + conto1.restituisciSaldo()");
+			conto1.preleva(4000);
+			System.out.println("saldo disponibile:" + conto1.restituisciSaldo());
+			System.out.println("movimenti: " +conto1.getnMovimenti());
 		} catch (BancaException e) {
-			System.out.println("errore durante il prelievo:" + e);
+			System.out.println("errore durante il prelievo");
+
+
 
 		}
 

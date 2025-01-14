@@ -26,11 +26,11 @@ public class ContoCorrente {
 	}
 
 	public double restituisciSaldo(){
-		return saldo;
+		return this.saldo;
 	}
 
 	public String getTitolare() {
-		return titolare;
+		return this.titolare;
 	}
 
 	public int getnMovimenti() {
@@ -42,6 +42,6 @@ public class ContoCorrente {
 	}
 
 	public double getSaldo() {
-		return saldo;
+		return this.saldo;
 	}
 }
